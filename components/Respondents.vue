@@ -82,7 +82,7 @@
               class="respondents__button respondents__button-delete"
               @click="deleteRule(rule)"
             >
-              <i class="gg-trash"></i>
+              <image-trash />
               Удалить условие
             </button>
             <button
@@ -115,8 +115,10 @@
 </template>
 
 <script>
+import ImageTrash from '@/components/ui/ImageTrash';
 export default {
   name: 'PollRespondents',
+  components: { ImageTrash },
   props: {
     rules: {
       type: Array,

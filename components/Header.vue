@@ -8,7 +8,7 @@
           placeholder="Поиск по системе"
         />
       </label>
-      <button class="fas fa-search" type="submit"></button>
+      <button-search />
     </form>
     <div class="header__profile">
       <button class="header__image" />
@@ -21,7 +21,9 @@
 </template>
 
 <script>
+import ButtonSearch from '@/components/ui/ButtonSearch';
 export default {
+  components: { ButtonSearch },
   data() {
     return {
       text: {
@@ -47,33 +49,12 @@ export default {
   margin: 13px 0 0;
 }
 
-.search__input,
-.fa-search {
-  outline: none;
-  background: transparent;
-}
-
 .search__input {
   width: 100%;
   height: 36px;
   padding-left: 15px;
   border: 1px solid #dbdbdb;
   border-radius: 4px;
-}
-
-.fas.fa-search {
-  color: #ccc;
-  border: none;
-  height: 36px;
-  width: 36px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-.fa-search:hover {
-  color: #a7a7a7;
 }
 
 .header__profile {
